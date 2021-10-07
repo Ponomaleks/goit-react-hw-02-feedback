@@ -27,7 +27,7 @@ class App extends Component {
     const TotalFeedback = this.countTotalFeedback();
     const PositiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
     return (
-      <>
+      <div className="app">
         <Section title="Pease leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
@@ -43,14 +43,16 @@ class App extends Component {
               bad={this.state.bad}
               total={0}
               positivePercentage={0}
+              // eslint-disable-next-line react/jsx-no-duplicate-props
               total={TotalFeedback}
+              // eslint-disable-next-line react/jsx-no-duplicate-props
               positivePercentage={PositiveFeedbackPercentage}
             />
           </Section>
         ) : (
           <p>Not feedback given</p>
         )}
-      </>
+      </div>
     );
   }
 }

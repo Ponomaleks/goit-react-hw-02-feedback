@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Button from '../components/Button';
 
 export default function FeedbackOptions({ options, type, onLeaveFeedback }) {
@@ -9,3 +10,9 @@ export default function FeedbackOptions({ options, type, onLeaveFeedback }) {
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string),
+  type: PropTypes.string,
+  onClick: PropTypes.func,
+};
